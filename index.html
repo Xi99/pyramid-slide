@@ -10,16 +10,18 @@
 
     <form id="draw-form">
         Which Symbol: 
-        <select id="symbol">
+        <select id="symbol" onchange="getSymbol()" />
             <option value="#">#</option>
             <option value="$">$</option>
             <option value="%">%</option>
             <option value="*">*</option>
         </select>
         How High?:
-        <input type="range" id="slider" oninput="drawPyramid()"/>
-    
+        <input type="range" id="slider" oninput="drawPyramid() min="0" max="10" list="tickmarks" value="0" />
+       
     </form>  
+
+    <br><br>
 
     <div id="pyramid"></div>
 

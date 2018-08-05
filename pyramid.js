@@ -1,25 +1,31 @@
-/* function buildPyramid() {
-    var pyra = document.getElementById("slider");
-}   document.getElementById("pyramid").innerHTML = "test";
-*/
 
-//var input = document.querySelector('slider');
-//input.addEventListener('input', drawPyramid());
+
 
 var heightElem = document.getElementById("slider");
 
 var formElem = document.getElementById("draw-form");
+
+var symbolElem= document.getElementById("symbol");
+
+// What was I trying to do here!
+function getSymbol(symbol) {  
+    var value = symbolElem.value;
+    return value;
+}
+
+
+// Is this way better than what I got going on?
+symbolElem.onchange = function(event) {
+    symbolStr = symbolElem.value;
+    getSymbol(symbolStr);
+
+}
+
+
 // set a handler function for the form's submission event
-formElem.oninput = function(event) {
+heightElem.oninput = function(event) {
 
-    // QUIZ
-    // what happens if we don't do this?
-    //event.preventDefault();
-
-    // QUIZ
-    // what happens if we don't do this?
-    //clearError();
-
+   
     // figure out the height the user typed
     heightStr = heightElem.value;
     height = parseInt(heightStr);
@@ -32,6 +38,8 @@ function drawPyramid(height) {
     
     document.getElementById("pyramid").innerHTML = "";
    
+    var symbolElem= document.getElementById("symbol");
+    symbolStr = symbolElem.value;
     // for each row....
     for (var row = 0; row < height; row++) {
 
@@ -47,7 +55,7 @@ function drawPyramid(height) {
             rowStr += spaceChar;
         }
         for (var i = 0; i < numBricks; i++) {
-            rowStr += "#";
+            rowStr += symbolStr;
         }
 
         // make a <p> element for this row, and insert it into the #pyramid container
