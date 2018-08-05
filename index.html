@@ -1,0 +1,30 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Pyramid Slide</title>   
+    
+</head>
+<body>
+    <h1>Pyramid Slide!</h1>
+
+    <form id="draw-form">
+        Which Symbol: 
+        <select id="symbol">
+            <option value="#">#</option>
+            <option value="$">$</option>
+            <option value="%">%</option>
+            <option value="*">*</option>
+        </select>
+        How High?:
+        <input type="range" id="slider" oninput="drawPyramid()"/>
+    
+    </form>  
+
+    <div id="pyramid"></div>
+
+    <script src="pyramid.js"></script>
+
+</body>
+</html>
+   
