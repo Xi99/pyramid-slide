@@ -1,36 +1,36 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-    
     <title>Pyramid Slide</title>
-    <style>
-        div#pyramid div {
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="pyramid-slide.css">
 </head>
 <body>
+<div id="ech1">
     <h1>Pyramid Slide!</h1>
+</div>
+    <br>
+<div id="bigger-box">
+    <div id="big-box">
+        <div id="selectors">
+            <strong>Which Symbol:</strong>
+            <select id="symbol" onchange="getSymbol()" />
+                <option value="#">#</option>
+                <option value="$">$</option>
+                <option value="%">%</option>
+                <option value="*">*</option>
+                <option value="¯\_(ツ)_/¯">¯\_(ツ)_/¯</option>
+            </select>
+            <strong>How High?:</strong>
+            <input type="range" id="slider" oninput="drawPyramid()" min="0" max="50" list="tickmarks" value="0" />
+        </div>
 
-    <form id="draw-form">
-        Which Symbol: 
-        <select id="symbol" onchange="getSymbol()" />
-            <option value="#">#</option>
-            <option value="$">$</option>
-            <option value="%">%</option>
-            <option value="*">*</option>
-        </select>
-        How High?:
-        <input type="range" id="slider" oninput="drawPyramid() min="0" max="50" list="tickmarks" value="0" />
-       
-    </form>  
+            <br><br>
 
-    <br><br>
+            <div id="pyramid"></div>
 
-    <div id="pyramid"></div>
-
-    <script src="pyramid.js"></script>
-
+            <script src="pyramid.js"></script>
+    </div>
+</div>
 </body>
 </html>
    

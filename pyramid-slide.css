@@ -1,0 +1,59 @@
+#ech1 {
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#pyramid {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: aqua;
+}
+
+#selectors {
+    background-color: rgb(93, 92, 92);
+    padding: 5px 5px 5px 5px;
+    border: 1px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+#bigger-box {
+    border: 8px solid;
+    padding: 40px 40px 40px 40px;
+    background-color: grey;
+}
+
+#big-box {
+    border: 5px solid;
+    border-radius:  15px 15px 0px 0px;
+    color: palevioletred;
+    background-color: aqua;
+}
+
+h3 {
+    padding: 10px 10px 10px 10px;
+
+}
+
+h1 {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    
+
+}
+
+body {
+    background-color;
+}
+
+select {
+    color: rgb(255, 17, 0);
+}
+
+strong {
+    color: paleturquoise;
+    font-size: 25px;
+}
