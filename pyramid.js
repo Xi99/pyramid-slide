@@ -7,6 +7,8 @@ var formElem = document.getElementById("draw-form");
 
 var symbolElem= document.getElementById("symbol");
 
+var height = 0
+
 // What was I trying to do here!
 function getSymbol(symbol) {  
     var value = symbolElem.value;
@@ -18,7 +20,7 @@ function getSymbol(symbol) {
 symbolElem.onchange = function(event) {
     symbolStr = symbolElem.value;
     getSymbol(symbolStr);
-
+    drawPyramid(height);
 }
 
 
@@ -58,9 +60,11 @@ function drawPyramid(height) {
             rowStr += symbolStr;
         }
 
-        // make a <p> element for this row, and insert it into the #pyramid container
+        // make a <div> element for this row, and insert it into the #pyramid container
         rowElem = document.createElement("div");
+        // navigate to the newly created "div" from above and put rowStr (the symbols created from buildPyramid()) in it
         rowElem.innerHTML = rowStr;
+        // navigate to the element with an id of "pyramid" and and to it (append) rowElem
         document.getElementById("pyramid").appendChild(rowElem);
     }
 }
